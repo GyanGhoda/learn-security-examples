@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(
   session({
     secret: "SOMESECRET",
-    cookie: {httpOnly: false},
+    cookie: { httpOnly: false },
     resave: false,
     saveUninitialized: false
   })
@@ -16,10 +16,10 @@ app.use(
 app.post("/sensitive", (req, res) => {
   if (req.session.user === 'Admin') {
     req.session.sensitive = 'supersecret';
-    res.send({message: 'Operation successful'});
+    res.send({ message: 'Operation successful' });
   }
   else {
-    res.send({message: 'Unauthorized Access'});
+    res.send({ message: 'Unauthorized Access' });
   }
 })
 
