@@ -1,2 +1,4 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The vulnerability is related to a possible NoSQL injection through the database query. The secure version uses a try catch block around the database query in order to catch errors that can happen during the database query. Additional security measures that could be added include input sanitization and input validation in order to make sure that there are no malicious inputs being sent to the app. In addition, the data being queried could also be encrypted in order to futher protect the data from harm by a malicious input.
