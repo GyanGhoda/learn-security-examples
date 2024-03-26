@@ -1,2 +1,4 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The problem with the insecure version is the lack of logging, meaning there's no straightforward way to verify who sent a message or accessed the messages, thus making the system vulnerable to repudiation threats. The secure version fixes this vulnerability by logging every request made to the server, logging specific actions like message sending and message retrieval, and by logging errors. Additional security measures that can be added including authorization and authentication to ensure the identities of users are valid. Logs and the data behind the app can also be encrypted in order to add a further layer of security between malicious users and the app data.
