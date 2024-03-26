@@ -1,3 +1,5 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+The vulnerability in the insecure code snippet is due to NoSQL injection. The secure version preforms input sanitization to prevent the vulnerability by checking if the username field is of type string, and by removing non-alphanumeric characters from the username. This prevents a NoSQL injection attack that could be done in the insecure version. The CIA properties that this violates are integerity by allowing unauthorized manipulation of data and confidentiality by allowing unauthorized access to data. Some ways that additional security measures could be added are authentication and authorization mechanisms to ensure only certain users can access certain data and encrypting of data to ensure that the data is protected in the app. 
